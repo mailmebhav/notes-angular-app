@@ -1,0 +1,14 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+<section class="main" *ngIf="todos.length > 0">
+  <ul class="todo-list">
+    <li *ngFor="let todo of todos" [class.completed]="todo.pinned">
+
+        <app-todo-list-item
+        [todo]="todo"
+        (toggleComplete)="onToggleTodoComplete($event)"
+        (remove)="onRemoveTodo($event)" (update)="onUpdateTodo($event)"></app-todo-list-item>
+
+    </li>
+  </ul>
+</section>

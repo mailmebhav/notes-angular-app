@@ -1,0 +1,11 @@
+header{
+  text-align: center;
+}
+mat-card{
+  max-width: 300px;
+  margin: 0 auto;
+}
+mat-card-subtitle{
+  padding-top: 10px;
+  font-size: 14px;
+}

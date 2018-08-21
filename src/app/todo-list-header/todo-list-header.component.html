@@ -1,0 +1,15 @@
+<header class="header">
+  <h1>Todos</h1>
+  <mat-card>
+    <mat-card-content>
+      <mat-card-subtitle>
+        Title
+      </mat-card-subtitle>
+      <input class="new-todo" placeholder="Enter Title" autofocus="" [(ngModel)]="newTodo.title">
+      <mat-card-subtitle>
+        Text
+      </mat-card-subtitle>
+      <input class="new-todo" placeholder="Enter Text" [(ngModel)]="newTodo.Text" (keyup.enter)="addTodo()"/>
+    </mat-card-content>
+  </mat-card>
+</header>
