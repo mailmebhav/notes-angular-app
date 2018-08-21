@@ -56,7 +56,7 @@ export class ApiService {
 
   public deleteTodoById(todoId: number): Observable<null> {
     return this.http
-      .delete(API_URL + '/api/Notes' + todoId)
+      .delete(API_URL + '/api/Notes/' + todoId)
       .pipe(map(response => null))
       .pipe(catchError(this.handleError));
   }

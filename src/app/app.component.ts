@@ -11,7 +11,7 @@ import { NotesDataService } from './notes-data.service'
 export class AppComponent {
   // title = 'NotesUI';
 
-  notes: Notes[] = [];
+  todos: Notes[] = [];
   // newTodo: Notes = new Notes();
   /**
   *
@@ -24,7 +24,7 @@ export class AppComponent {
     .getAllTodos()
     .subscribe(
       (todos) => {
-        this.notes = todos;
+        this.todos = todos;
       }
     );
   }
@@ -34,7 +34,7 @@ export class AppComponent {
     .addTodo(todo)
     .subscribe(
       (newTodo) => {
-        this.notes = this.notes.concat(newTodo);
+        this.todos = this.todos.concat(newTodo);
       }
     );
   }
@@ -54,7 +54,7 @@ export class AppComponent {
     .deleteTodoById(todo.id)
     .subscribe(
       (_) => {
-        this.notes = this.notes.filter((t) => t.id !== todo.id);
+        this.todos = this.todos.filter((t) => t.id !== todo.id);
       }
     );
   }
