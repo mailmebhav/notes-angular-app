@@ -12,6 +12,7 @@ import { TodoListComponent } from './todo-list/todo-list.component';
 import { TodoListItemComponent } from './todo-list-item/todo-list-item.component';
 import { NotesDataService } from './notes-data.service';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import { ReactiveFormsModule } from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { HttpClientModule }    from '@angular/common/http';
 import {MatCheckboxModule} from '@angular/material/checkbox';
@@ -27,7 +28,7 @@ import 'hammerjs';
     TodoListItemComponent
   ],
   imports: [
-    BrowserModule, FormsModule, HttpModule , MatCardModule, MatGridListModule, MatButtonModule,MatInputModule, MatIconModule, MatSlideToggleModule,BrowserAnimationsModule,HttpClientModule,MatCheckboxModule, MatFormFieldModule
+    BrowserModule, FormsModule, HttpModule , MatCardModule, ReactiveFormsModule, MatGridListModule, MatButtonModule,MatInputModule, MatIconModule, MatSlideToggleModule,BrowserAnimationsModule,HttpClientModule,MatCheckboxModule, MatFormFieldModule
   ],
   providers: [NotesDataService],
   bootstrap: [AppComponent]
