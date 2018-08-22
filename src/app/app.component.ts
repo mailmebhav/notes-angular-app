@@ -49,6 +49,16 @@ export class AppComponent {
     );
   }
 
+  onUpdateTodo(todo) {
+    this.notesDataService
+    .updateTodoById(todo)
+    .subscribe(
+      (updatedTodo) => {
+        todo = updatedTodo;
+      }
+    );
+  }
+
   onRemoveTodo(todo) {
     this.notesDataService
     .deleteTodoById(todo.id)

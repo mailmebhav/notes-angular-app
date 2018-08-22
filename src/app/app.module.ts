@@ -17,8 +17,11 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { HttpClientModule }    from '@angular/common/http';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatInputModule} from '@angular/material/input';
+import {MatDialogModule} from '@angular/material/dialog';
 import {MatFormFieldModule} from '@angular/material/form-field';
+
 import 'hammerjs';
+// import {DialogOverviewExample, DialogOverviewExampleDialog} from './todo-list-item/todo-list-item.component';
 
 @NgModule({
   declarations: [
@@ -26,10 +29,12 @@ import 'hammerjs';
     TodoListHeaderComponent,
     TodoListComponent,
     TodoListItemComponent
+    // DialogOverviewExample, DialogOverviewExampleDialog
   ],
   imports: [
-    BrowserModule, FormsModule, HttpModule , MatCardModule, ReactiveFormsModule, MatGridListModule, MatButtonModule,MatInputModule, MatIconModule, MatSlideToggleModule,BrowserAnimationsModule,HttpClientModule,MatCheckboxModule, MatFormFieldModule
+    BrowserModule, FormsModule, HttpModule , MatCardModule, MatDialogModule, ReactiveFormsModule, MatGridListModule, MatButtonModule,MatInputModule, MatIconModule, MatSlideToggleModule,BrowserAnimationsModule,HttpClientModule,MatCheckboxModule, MatFormFieldModule
   ],
+  // entryComponents: [DialogOverviewExample, DialogOverviewExampleDialog],
   providers: [NotesDataService],
   bootstrap: [AppComponent]
 })

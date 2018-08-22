@@ -1,5 +1,6 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter, Inject } from '@angular/core';
 import { Notes } from '../notes';
+import { FormControl } from '@angular/forms';
 // import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 
 @Component({
@@ -9,6 +10,8 @@ import { Notes } from '../notes';
 })
 export class TodoListItemComponent {
 
+  edit: boolean= true;
+  // title = new FormControl('');
   @Input() todo: Notes;
 
   @Output()
@@ -32,7 +35,12 @@ export class TodoListItemComponent {
   }
 
   updateTodo(todo: Notes) {
+    this.edit = !this.edit;
     this.update.emit(todo);
+  }
+
+  toggleedit(edit: boolean) {
+    this.edit = !this.edit;
   }
 
 }
