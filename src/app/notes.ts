@@ -2,7 +2,7 @@ export class Notes {
   id: number;
   Title : string;
   Text : string;
-  complete: boolean;
+  pinned: boolean = false;
 
   constructor(values: Object = {}) {
     Object.assign(this, values);

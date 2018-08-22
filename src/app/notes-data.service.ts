@@ -47,6 +47,7 @@ export class NotesDataService {
 
   // Toggle todo complete
   toggleTodoComplete(todo: Notes){
+    todo.pinned = !todo.pinned;
     return this.api.updateTodo(todo);
   }
 }

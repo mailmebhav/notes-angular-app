@@ -3,7 +3,7 @@ rel="stylesheet">
 <section class="main" *ngIf="todos.length > 0">
   <ul class="todo-list">
     <mat-grid-list cols="3">
-      <li *ngFor="let todo of todos" [class.completed]="todo.pinned">
+      <li *ngFor="let todo of todos" [class.pinned]="todo.pinned">
         <mat-grid-tile>
           <app-todo-list-item
           [todo]="todo"
