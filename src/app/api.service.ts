@@ -38,7 +38,7 @@ export class ApiService {
 
   public getTodoById(todoId: number): Observable<Notes> {
     return this.http
-      .get(API_URL + '/api/Notes' + todoId)
+      .get(API_URL + '/api/Notes/' + todoId)
       .pipe(map(response => {
         return new Notes(response.json());
       }))
@@ -47,7 +47,7 @@ export class ApiService {
 
   public updateTodo(todo: Notes): Observable<Notes> {
     return this.http
-      .put(API_URL + '/api/Notes' + todo.id, todo)
+      .put(API_URL + '/api/Notes/' + todo.id, todo)
       .pipe(map(response => {
         return new Notes(response.json());
       }))

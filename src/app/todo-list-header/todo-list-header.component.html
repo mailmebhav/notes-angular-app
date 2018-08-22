@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 <header class="header">
   <h1>Todos</h1>
   <mat-card>
@@ -11,5 +12,10 @@
       </mat-card-subtitle>
       <input class="new-todo" placeholder="Enter Text" [(ngModel)]="newTodo.Text" (keyup.enter)="addTodo()"/>
     </mat-card-content>
+    <div *ngIf="pinnedfalse; else pinnedtrue" [(ngModel)]="newTodo.complete">
+      <i class="fas fa-thumbtack" id="pinnedfalse" style="color:lightgray"></i>
+      <i class="fas fa-thumbtack" id= "pinnedtrue"></i>
+    </div>
+    <!-- <mat-slide-toggle>Pinned?</mat-slide-toggle> -->
   </mat-card>
 </header>

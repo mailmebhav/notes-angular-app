@@ -1,11 +1,13 @@
-
-label{
-}
 mat-card{
+  min-width: 200px;
   max-width: 200px;
   margin-bottom: 10px;
+  font-family: 'Montserrat', sans-serif;
 }
-mat-card-title{
-  font-size: 1.5em;
+mat-card mat-card-title{
+  font-size: 1.25em;
   font-weight: bold;
+}
+mat-icon{
+  cursor: pointer;
 }
