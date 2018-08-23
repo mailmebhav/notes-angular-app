@@ -1,16 +1,16 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
 rel="stylesheet">
 <section class="main" *ngIf="todos.length > 0">
-  <ul class="todo-list">
-    <mat-grid-list cols="3">
-      <li *ngFor="let todo of todos" [class.pinned]="todo.pinned">
-        <mat-grid-tile>
+  <!-- <ul class="todo-list"> -->
+    <mat-grid-list cols="3" class="todo-list" row-height="2:1">
+      <!-- <li *ngFor="let todo of todos" [class.pinned]="todo.pinned"> -->
+        <mat-grid-tile *ngFor="let todo of todos" [class.pinned]="todo.pinned">
           <app-todo-list-item
           [todo]="todo"
           (toggleComplete)="onToggleTodoComplete($event)"
           (remove)="onRemoveTodo($event)" (update)="onUpdateTodo($event)"></app-todo-list-item>
         </mat-grid-tile>
-      </li>
+      <!-- </li> -->
     </mat-grid-list>
-  </ul>
+  <!-- </ul> -->
 </section>

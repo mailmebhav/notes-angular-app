@@ -1,5 +1,9 @@
 .main{
 }
-ul{
+/* ul{
   list-style: none;
+} */
+mat-grid-tile{
+  /* max-width: 90%; */
+  /* margin: 10px; */
 }

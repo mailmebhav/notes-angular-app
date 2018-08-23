@@ -10,7 +10,7 @@ import { FormControl } from '@angular/forms';
 })
 export class TodoListItemComponent {
 
-  edit: boolean= true;
+  edit: boolean= false;
   // title = new FormControl('');
   @Input() todo: Notes;
 

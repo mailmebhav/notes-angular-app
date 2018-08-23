@@ -7,11 +7,11 @@
     <mat-card-header>
       <mat-card-title>
         <!--  <mat-form-field> -->
-          <div *ngIf="edit; else edittitle">
+          <div *ngIf="!edit; else edittitle">
             {{todo.title}}
           </div>
           <ng-template #edittitle>
-            <input type="textbox" [(ngModel)]="todo.title">
+            <input matInput class="edittextbox" type="textbox" [(ngModel)]="todo.title">
 
           </ng-template>
           <!-- <input matInput [(ngModel)]="todo.title"> -->
@@ -19,13 +19,13 @@
         </mat-card-title>
       </mat-card-header>
       <mat-card-content>
-        <div *ngIf="edit; else edittext">
+        <div *ngIf="!edit; else edittext">
           <p>
             {{todo.text}}
           </p>
         </div>
         <ng-template #edittext>
-          <input type="textbox" [(ngModel)]="todo.text">
+          <input matInput class="edittextbox" type="textbox" [(ngModel)]="todo.text">
           <!-- <mat-icon class="destroy">
             save
           </mat-icon> -->
@@ -35,10 +35,10 @@
         <mat-icon class="destroy" (click)="removeTodo(todo)">
           delete
         </mat-icon>
-        <mat-icon *ngIf="edit" class="destroy" (click)="toggleedit(edit)">
+        <mat-icon *ngIf="!edit" class="destroy" (click)="toggleedit(edit)">
           edit
         </mat-icon>
-        <mat-icon *ngIf="!edit" class="destroy" (click)="updateTodo(todo)">
+        <mat-icon *ngIf="edit" class="destroy" (click)="updateTodo(todo)">
           save
         </mat-icon>
       </mat-card-actions>
