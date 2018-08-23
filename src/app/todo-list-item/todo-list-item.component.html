@@ -1,46 +1,46 @@
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 <div class="view">
-  <mat-card>
-    <mat-checkbox class="toggle" [checked]="todo.pinned" (change)="toggleTodoComplete(todo)" >
-      <!-- <input class="toggle" type="checkbox" (click)="toggleTodoComplete(todo)" [checked]="todo.complete"> -->
-    </mat-checkbox>
-    <mat-card-header>
-      <mat-card-title>
-        <!--  <mat-form-field> -->
-          <div *ngIf="!edit; else edittitle">
-            {{todo.title}}
-          </div>
-          <ng-template #edittitle>
-            <input matInput class="edittextbox" type="textbox" [(ngModel)]="todo.title">
-
-          </ng-template>
-          <!-- <input matInput [(ngModel)]="todo.title"> -->
-          <!-- </mat-form-field> -->
-        </mat-card-title>
-      </mat-card-header>
-      <mat-card-content>
-        <div *ngIf="!edit; else edittext">
-          <p>
-            {{todo.text}}
-          </p>
+  <mat-checkbox class="toggle" [checked]="todo.pinned" (change)="toggleTodoComplete(todo)" >
+    <!-- <input class="toggle" type="checkbox" (click)="toggleTodoComplete(todo)" [checked]="todo.complete"> -->
+  </mat-checkbox>
+  <mat-card-header>
+    <mat-card-title>
+      <!--  <mat-form-field> -->
+        <div *ngIf="!edit; else edittitle">
+          {{todo.title}}
         </div>
-        <ng-template #edittext>
-          <input matInput class="edittextbox" type="textbox" [(ngModel)]="todo.text">
-          <!-- <mat-icon class="destroy">
-            save
-          </mat-icon> -->
+        <ng-template #edittitle>
+          <mat-form-field>
+            <input matInput placeholder="Title" autofocus="" type="textbox" [(ngModel)]="todo.title">
+          </mat-form-field>
         </ng-template>
-      </mat-card-content>
-      <mat-card-actions>
-        <mat-icon class="destroy" (click)="removeTodo(todo)">
-          delete
-        </mat-icon>
-        <mat-icon *ngIf="!edit" class="destroy" (click)="toggleedit(edit)">
-          edit
-        </mat-icon>
-        <mat-icon *ngIf="edit" class="destroy" (click)="updateTodo(todo)">
+        <!-- <input matInput [(ngModel)]="todo.title"> -->
+        <!-- </mat-form-field> -->
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div *ngIf="!edit; else edittext">
+        <p>
+          {{todo.text}}
+        </p>
+      </div>
+      <ng-template #edittext>
+        <mat-form-field>
+          <input matInput placeholder="Text" type="textbox" [(ngModel)]="todo.text">
+        </mat-form-field>
+        <!-- <mat-icon class="destroy">
           save
-        </mat-icon>
-      </mat-card-actions>
-    </mat-card>
+        </mat-icon> -->
+      </ng-template>
+    </mat-card-content>
+    <mat-card-actions>
+      <mat-icon class="destroy" (click)="removeTodo(todo)">
+        delete
+      </mat-icon>
+      <mat-icon *ngIf="!edit" class="destroy" (click)="toggleedit(edit)">
+        edit
+      </mat-icon>
+      <mat-icon *ngIf="edit" class="destroy" (click)="updateTodo(todo)">
+        save
+      </mat-icon>
+    </mat-card-actions>
   </div>

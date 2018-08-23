@@ -1,11 +1,22 @@
 header{
   text-align: center;
+  font-family: 'Montserrat', sans-serif;
 }
 mat-card{
   max-width: 300px;
   margin: 0 auto;
+  font-family: 'Montserrat', sans-serif;
 }
 mat-card-subtitle{
   padding-top: 10px;
   font-size: 14px;
+}
+mat-card-actions{
+  text-align: right;
+}
+mat-icon{
+  cursor: pointer;
+}
+mat-card mat-form-field{
+  font-family: 'Montserrat', sans-serif;
 }

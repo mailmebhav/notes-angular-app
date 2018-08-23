@@ -1,21 +1,13 @@
-mat-card{
-  /* max-width: 100%; */
-  /* min-width: 100%; */
-  font-family: 'Montserrat', sans-serif;
-}
-mat-card mat-card-title{
+.view mat-card-title{
   font-size: 1.25em;
   font-weight: bold;
   word-wrap: break-word;
   /* margin: 10px; */
   /* max-width: 100%; */
 }
-mat-icon{
+.view mat-icon{
   cursor: pointer;
 }
 .toggle{
   float: right;
-}
-.edittextbox{
-  border-bottom: 1px solid black;
 }

@@ -4,6 +4,11 @@
   list-style: none;
 } */
 mat-grid-tile{
+  width: 80%;
   /* max-width: 90%; */
   /* margin: 10px; */
+}
+mat-card{
+  width: 80%;
+  font-family: 'Montserrat', sans-serif;
 }
